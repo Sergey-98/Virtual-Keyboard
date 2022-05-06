@@ -1,0 +1,85 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --font1: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/background-body.jpg');
+    background-repeat: no-repeat;
+    background-size: 145rem;
+}
+.none {
+    display: none;
+}
+.window {
+    margin: 5% auto;
+    width: 900px;
+}
+.screen {
+    margin: 0 auto 3% auto;
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+.key {
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.line {
+    display: flex;
+    gap: 1%;
+}
+.line {
+    width: 100%;
+}
+.keys {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-grow: 1;
+    background-color: #808080;
+    color: #f5eded;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+.key {
+    width: 100vw;
+}
+.keys:hover ,.key:hover {
+    cursor: pointer;
+    background-color: #94fa8b;
+    color: #414141;
+}
+.keys:active, .key:active {
+    cursor: pointer;
+    background-color: #064d00;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keys.active {
+    background-color: #064d00;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keys.active .key {
+    background-color: #064d00;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keyboard {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: #cecece;
+}
