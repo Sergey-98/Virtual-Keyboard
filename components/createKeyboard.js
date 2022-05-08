@@ -136,7 +136,8 @@ function Keyboard() {
                   } else if (elem.textContent == 'Tab') {
                   textarea.textContent += '    ';
                   } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
-                  textarea.textContent = textarea.textContent;
+                    let text = textarea.textContent;
+                    textarea.textContent = text;
                   } else if (elem.textContent == 'Backspace') {
                     textarea.textContent = backspace(textarea.textContent);
                   } else {
@@ -197,7 +198,8 @@ function Keyboard() {
                   } else if (elem.textContent == 'Tab') {
                   textarea.textContent += '    ';
                   } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
-                  textarea.textContent = textarea.textContent;
+                    let text = textarea.textContent;
+                    textarea.textContent = text;
                   } else if (elem.textContent == 'Backspace') {
                     textarea.textContent = backspace(textarea.textContent);
                   } else {
@@ -253,7 +255,8 @@ function Keyboard() {
                   } else if (elem.textContent == 'Tab') {
                   textarea.textContent += '    ';
                   } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
-                  textarea.textContent = textarea.textContent;
+                    let text = textarea.textContent;
+                    textarea.textContent = text;
                   } else if (elem.textContent == 'Backspace') {
                     textarea.textContent = backspace(textarea.textContent);
                   } else {
@@ -312,7 +315,8 @@ function Keyboard() {
                 } else if (elem.textContent == 'Tab') {
                 textarea.textContent += '    ';
                 } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
-                textarea.textContent = textarea.textContent;
+                  let text = textarea.textContent;
+                  textarea.textContent = text;
                 } else if (elem.textContent == 'Backspace') {
                   textarea.textContent = backspace(textarea.textContent);
                 } else {

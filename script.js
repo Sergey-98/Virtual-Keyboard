@@ -54,7 +54,8 @@ key.forEach((elem) => {
     } else if (elem.textContent == 'Tab') {
       textarea.textContent += '    ';
     } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
-      textarea.textContent = textarea.textContent;
+      let text = textarea.textContent;
+      textarea.textContent = text;
     } else if (elem.textContent == 'Backspace') {
       textarea.textContent = backspace(textarea.textContent);
     } else {
@@ -73,7 +74,8 @@ document.addEventListener('keydown', (event) => {
   } else if (event.code == 'AltLeft' || event.code == 'AltRight' || event.code == 'ControlLeft' || 
              event.code == 'ControlRight' || event.code == 'Delete' || event.code == 'MetaLeft' || event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
     document.getElementById(`${event.code}`).classList.add('active');
-    textarea.textContent = textarea.textContent;
+    let text = textarea.textContent;
+    textarea.textContent = text;
     event.preventDefault();
   } else if (event.code == 'Backspace') {
     document.getElementById(`${event.code}`).classList.add('active');
