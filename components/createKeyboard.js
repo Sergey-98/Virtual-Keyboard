@@ -76,7 +76,7 @@ function Keyboard() {
     let line_3 = document.querySelector('.line-3');
     let line_4 = document.querySelector('.line-4');
     let line_5 = document.querySelector('.line-5');
-    
+
     function setLocalStorage(key, value) {
         localStorage.setItem(key, value);
     }
@@ -110,12 +110,15 @@ function Keyboard() {
             }
         }
     }
-
     createKeyboard(rusLine_1, enLine_1, code_1, line_1);
     createKeyboard(rusLine_2, enLine_2, code_2, line_2);
     createKeyboard(rusLine_3, enLine_3, code_3, line_3);
     createKeyboard(rusLine_4, enLine_4, code_4, line_4);
     createKeyboard(rusLine_5, enLine_5, code_5, line_5);
+    if (!localStorage.getItem('lang')) {
+      setLocalStorage('lang', 'ru');
+      activeLang();
+    }
     document.addEventListener('keydown', (event) => {
         if (event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
             [line_1,line_2,line_3,line_4,line_5].forEach((elem) => {
