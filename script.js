@@ -37,7 +37,30 @@ runOnKeys(
   "ControlLeft",
   "AltLeft"
 );
-
+runOnKeys(
+  () => {
+      rus.forEach(elem => {
+        if (elem.classList.contains('none')) {
+          elem.classList.remove('none');  
+          setLocalStorage('lang', 'ru');
+        } else {
+          elem.classList.add('none');  
+          setLocalStorage('lang', 'en');
+        }
+      });
+      eng.forEach(elem => {
+        if (elem.classList.contains('none')) {
+          elem.classList.remove('none');  
+          setLocalStorage('lang', 'en');
+        } else {
+          elem.classList.add('none');  
+          setLocalStorage('lang', 'ru');
+        }
+      }); 
+  },
+  "ControlLeft",
+  "AltRight"
+);
 let key = document.querySelectorAll('.key');
 let textarea = document.querySelector('.screen');
 
@@ -53,7 +76,7 @@ key.forEach((elem) => {
       textarea.textContent += `\n`;
     } else if (elem.textContent == 'Tab') {
       textarea.textContent += '    ';
-    } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
+    } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift' || elem.textContent == 'CapsLock') {
       let text = textarea.textContent;
       textarea.textContent = text;
     } else if (elem.textContent == 'Backspace') {
@@ -71,6 +94,7 @@ document.addEventListener('keydown', (event) => {
   } else if (event.code == 'Tab') {
     document.getElementById(`${event.code}`).classList.add('active');
     textarea.textContent += '    ';
+    event.preventDefault();
   } else if (event.code == 'AltLeft' || event.code == 'AltRight' || event.code == 'ControlLeft' || 
              event.code == 'ControlRight' || event.code == 'Delete' || event.code == 'MetaLeft' || event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
     document.getElementById(`${event.code}`).classList.add('active');
@@ -80,6 +104,9 @@ document.addEventListener('keydown', (event) => {
   } else if (event.code == 'Backspace') {
     document.getElementById(`${event.code}`).classList.add('active');
     textarea.textContent = backspace(textarea.textContent);
+  } else if (event.code == 'CapsLock') {
+    let text = textarea.textContent;
+    textarea.textContent = text;
   } else {
     document.getElementById(`${event.code}`).classList.add('active');
     if (localStorage.getItem('lang') == 'ru') {
@@ -90,7 +117,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 document.addEventListener('keyup', (event) => { 
-  if (event.code) {
+  if (event.code != 'CapsLock') {
     document.getElementById(`${event.code}`).classList.remove('active');
   }
 });
