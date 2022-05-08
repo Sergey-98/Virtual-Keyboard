@@ -1,0 +1,229 @@
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --font1: 20px;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/background-body.jpg');
+    background-repeat: no-repeat;
+    background-size: 145rem;
+}
+.none {
+    display: none;
+}
+.window {
+    margin: 5% auto;
+    width: 900px;
+}
+.screen {
+    margin: 0 auto 3% auto;
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+.key {
+    height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.line {
+    display: flex;
+    gap: 1%;
+}
+.line {
+    width: 100%;
+}
+.window .change-language {
+    margin-top: 5%;
+    text-align: center;
+    background-color: #808080;
+    color: #f5eded;
+}
+.keys {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-grow: 1;
+    background-color: #808080;
+    color: #f5eded;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+.key {
+    width: 100vw;
+}
+.keys:hover, .key:hover {
+    cursor: pointer;
+    background-color: #399adb;
+    color: rgb(99, 92, 92);
+}
+.keys:active, .key:active {
+    cursor: pointer;
+    background-color: #042aa8;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.key-active {
+    background-color: #042aa8;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keys.active {
+    background-color: #042aa8;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keys.active .key {
+    background-color: #042aa8;
+    color: #ffbcbc;
+    border-radius: 50px;
+}
+.keyboard {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: #cecece;
+}
+.screen {
+    padding: 10px;
+    font-family: 'Verdana';
+    font-size: 25px;
+    color: #16b102;
+}
+.rus, .eng {
+    z-index: 5;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41,41,41,0.6);
+    z-index: 100;
+}
+.modal {
+    text-align: center;
+    position: relative;
+    bottom: 5%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #999999;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+.modal-close {
+    text-align: center;
+    margin-left: 70%;
+    margin-top: 10%;
+    width: 50px;
+    height: 50px;
+    font-size: 2.8rem;
+    border-radius: 50%;
+    background: #999999;
+    opacity: 0.5;
+}
+
+.modal-desc, .change-language {
+    font-family: 'Trebuchet MS';
+    font-size: 1.5em;
+}
+.modal-wrapper:hover {
+    cursor: pointer;
+}
+.modal-wrapper:hover .modal-close {
+    opacity: 1;
+}
+.modal:hover .modal-close {
+    opacity: 1;
+}
+.modal:hover {
+    cursor: default;
+}
+.modal-close:hover {
+    cursor: pointer;
+    background-color: #399adb;
+}
+.modal-info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.key {
+    margin-left: -15%;
+    padding: 0 46%;
+}
+#Tab .key{
+    margin: -15%;
+    padding: 0 25%;
+}
+#Delete .key{
+    margin: -15%;
+    padding: 0 25%;
+}
+#CapsLock .key{
+    margin: -5%;
+    padding: 0 13%;
+}
+#Backspace .key{
+    margin: -5%;
+    padding: 0 7%;
+}
+#Enter .key{
+    margin: -5%;
+    padding: 0 30%;
+}
+#ShiftLeft .key, #ShiftRight .key {
+    margin: -5%;
+    padding: 0 35%;
+}
+#ControlLeft .key, #ControlRight .key{
+    margin: -15%;
+    padding: 0 21%;
+}
+#AltLeft .key, #AltRight .key{
+    margin: -15%;
+    padding: 0 30%;
+}
+#MetaLeft .key{
+    margin: -15%;
+    padding: 0 19%;
+}
+#ArrowLeft .key, #ArrowDown .key, #ArrowRight .key, #ArrowUp .key {
+    margin: -15%;
+    padding: 0 35%;
+}
+#Space .key{
+    margin-left: -1%;
+    padding: 0 51%;
+}
+#Minus .key {
+    margin-left: -15%;
+    padding: 0 53%;
+}
+#Equal .key {
+    margin-left: -14%;
+    padding: 0 47%;
+}
+#Comma .eng, #Period .eng {
+    margin-left: -15%;
+    padding: 0 56%;
+}
+#Quote .eng {
+    margin-left: -15%;
+    padding: 0 60%;
+}

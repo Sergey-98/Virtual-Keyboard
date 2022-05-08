@@ -1,0 +1,27 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "virtual-keyboard for RSS",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergey-98/Virtual-Keyboard.git"
+  },
+  "keywords": [
+    "virtual",
+    "keyboard"
+  ],
+  "author": "Sergey-98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergey-98/Virtual-Keyboard/issues"
+  },
+  "homepage": "https://github.com/Sergey-98/Virtual-Keyboard#readme"
+}
