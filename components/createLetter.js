@@ -11,7 +11,7 @@ export default class Letter {
         letterWrap.classList.add('keys');
         letterWrap.id = `${this.id}`;
         letterWrap.innerHTML = `
-            <span class = "key rus none">${this.textRu}</span>
+            <span class = "key rus">${this.textRu}</span>
             <span class = "key eng none">${this.textEn}</span>
         `;
         letterWrap.style.cssText = `

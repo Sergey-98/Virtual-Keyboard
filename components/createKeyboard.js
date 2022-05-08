@@ -116,8 +116,8 @@ function Keyboard() {
     createKeyboard(rusLine_3, enLine_3, code_3, line_3);
     createKeyboard(rusLine_4, enLine_4, code_4, line_4);
     createKeyboard(rusLine_5, enLine_5, code_5, line_5);
-    setLocalStorage('lang', 'ru');
-    activeLang();
+    // setLocalStorage('lang', 'ru');
+    // activeLang();
     document.addEventListener('keydown', (event) => {
         if (event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
             [line_1,line_2,line_3,line_4,line_5].forEach((elem) => {
