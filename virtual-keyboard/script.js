@@ -34,41 +34,57 @@ runOnKeys(
         }
       }); 
   },
-  "ShiftLeft",
+  "ControlLeft",
   "AltLeft"
 );
 
 let key = document.querySelectorAll('.key');
 let textarea = document.querySelector('.screen');
+
+function backspace(text) {
+  let arr = text.toString().split('');
+  arr.pop();
+  return arr.join('');
+}
+
 key.forEach((elem) => {
   elem.addEventListener('click', () => {
     if (elem.textContent == 'Enter') {
       textarea.textContent += `\n`;
     } else if (elem.textContent == 'Tab') {
       textarea.textContent += '    ';
-    } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win') {
+    } else if (elem.textContent == 'Alt' || elem.textContent == 'Del' || elem.textContent == 'Ctrl' || elem.textContent == 'Win' || elem.textContent == 'Shift') {
       textarea.textContent = textarea.textContent;
+    } else if (elem.textContent == 'Backspace') {
+      textarea.textContent = backspace(textarea.textContent);
     } else {
       textarea.textContent += elem.textContent;
     }
   });
 });
 
-document.addEventListener('keydown', (event) => { 
-  console.log(event.code);
+document.addEventListener('keydown', (event) => {
   if (event.code == 'Enter') {
     document.getElementById(`${event.code}`).classList.add('active');
     textarea.textContent += `\n`;
   } else if (event.code == 'Tab') {
     document.getElementById(`${event.code}`).classList.add('active');
     textarea.textContent += '    ';
-  } else if (event.code == 'AltLeft' || event.code == 'AltRight' || event.code == 'ControlLeft' || event.code == 'ControlRight' || event.code == 'Delete' || event.code == 'MetaLeft') {
+  } else if (event.code == 'AltLeft' || event.code == 'AltRight' || event.code == 'ControlLeft' || 
+             event.code == 'ControlRight' || event.code == 'Delete' || event.code == 'MetaLeft' || event.code == 'ShiftLeft' || event.code == 'ShiftRight') {
     document.getElementById(`${event.code}`).classList.add('active');
     textarea.textContent = textarea.textContent;
     event.preventDefault();
+  } else if (event.code == 'Backspace') {
+    document.getElementById(`${event.code}`).classList.add('active');
+    textarea.textContent = backspace(textarea.textContent);
   } else {
     document.getElementById(`${event.code}`).classList.add('active');
-    textarea.textContent += event.key;
+    if (localStorage.getItem('lang') == 'ru') {
+      textarea.textContent += document.getElementById(`${event.code}`).childNodes[1].textContent;
+    } else if (localStorage.getItem('lang') == 'en') {
+      textarea.textContent += document.getElementById(`${event.code}`).childNodes[3].textContent;
+    }
   }
 });
 document.addEventListener('keyup', (event) => { 
