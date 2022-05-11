@@ -1,16 +1,17 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "eslint:recommended",
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-    }
-}
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: 'airbnb-base',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    'linebreak-style': 0,
+    'react/jsx-filename-extension': [0],
+    'import/extensions': 'off',
+  },
+};

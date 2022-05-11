@@ -1,23 +1,18 @@
 function runOnKeys(func, ...codes) {
-  let press = new Set();
-
-  document.addEventListener('keydown', function(event) {
+  const press = new Set();
+  document.addEventListener('keydown', (event) => {
     press.add(event.code);
-
-    for (let code of codes) {
-      if (!press.has(code)) {
+    for (let i = 0; i < codes.length; i) {
+      if (!press.has(codes[i])) {
         return;
       }
+      i += 1;
     }
     press.clear();
-
     func();
   });
-
-  document.addEventListener('keyup', function(event) {
+  document.addEventListener('keyup', (event) => {
     press.delete(event.code);
   });
-
 }
-
 export default runOnKeys;
