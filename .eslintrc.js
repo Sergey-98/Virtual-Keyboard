@@ -2,16 +2,16 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
-  extends: 'airbnb-base',
+  extends: 'airbnb-base/legacy',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   rules: {
     'linebreak-style': 0,
     'react/jsx-filename-extension': [0],
-    'import/extensions': 'off',
-  },
+    'import/extensions': 'off'
+  }
 };
