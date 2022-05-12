@@ -148,7 +148,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltLeft',
+        'AltLeft'
       );
       runOnKeys(
         () => {
@@ -172,7 +172,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltRight',
+        'AltRight'
       );
       if (caps) {
         document.getElementById('CapsLock').classList.add('active');
@@ -345,7 +345,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltLeft',
+        'AltLeft'
       );
       runOnKeys(
         () => {
@@ -369,7 +369,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltRight',
+        'AltRight'
       );
       if (caps) {
         document.getElementById('CapsLock').classList.add('active');
@@ -458,7 +458,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltLeft',
+        'AltLeft'
       );
       runOnKeys(
         () => {
@@ -482,7 +482,7 @@ function Keyboard() {
           });
         },
         'ControlLef',
-        'AltRight',
+        'AltRight'
       );
       if (caps) {
         document.getElementById('CapsLock').classList.add('active');
@@ -574,7 +574,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltLeft',
+        'AltLeft'
       );
       runOnKeys(
         () => {
@@ -598,7 +598,7 @@ function Keyboard() {
           });
         },
         'ControlLeft',
-        'AltRight',
+        'AltRight'
       );
       if (caps) {
         document.getElementById('CapsLock').classList.add('active');

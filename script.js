@@ -34,7 +34,7 @@ runOnKeys(
     });
   },
   'ControlLeft',
-  'AltLeft',
+  'AltLeft'
 );
 runOnKeys(
   () => {
@@ -58,7 +58,7 @@ runOnKeys(
     });
   },
   'ControlLeft',
-  'AltRight',
+  'AltRight'
 );
 const key = document.querySelectorAll('.key');
 const textarea = document.querySelector('.screen');
@@ -105,8 +105,7 @@ document.addEventListener('keydown', (event) => {
   } else if (event.code === 'CapsLock') {
     const text = textarea.textContent;
     textarea.textContent = text;
-  } else {
-    document.getElementById(`${event.code}`).classList.add('active');
+  } else if (event.code !== 'F12') {
     if (localStorage.getItem('lang') === 'ru') {
       textarea.textContent += document.getElementById(`${event.code}`).childNodes[1].textContent;
     } else if (localStorage.getItem('lang') === 'en') {
@@ -115,7 +114,7 @@ document.addEventListener('keydown', (event) => {
   }
 });
 document.addEventListener('keyup', (event) => {
-  if (event.code !== 'CapsLock') {
+  if (event.code !== 'CapsLock' && event.code !== 'F12') {
     document.getElementById(`${event.code}`).classList.remove('active');
   }
 });
